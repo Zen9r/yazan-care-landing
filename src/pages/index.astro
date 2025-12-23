@@ -218,6 +218,37 @@ body::after {
       font-size: 0.95rem;
     }
   }
+
+  <!-- ستايل الصورة -->
+
+  .location-image-frame {
+  width: 100%;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.25);  /* ← زودت الشفافية عشان يبين أبيض */
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.4);  /* ← خليت البوردر أوضح */
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);  /* ← زودت الظل */
+  transition: all 0.3s ease;
+}
+
+
+
+.location-image-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.location-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
   </style>
   
 <body>
@@ -232,7 +263,8 @@ body::after {
 <!-- العبارة الترحيبية -->
 <div class="welcome-text">
   <h2 class="welcome-title">مرحباً بكم في عناية يزن</h2>
-  <p class="welcome-subtitle">وجهتكم للعناية الشخصية والتجميل، حيث نقدم لكم تجربة مميزة وعناية فائقة.</p>
+  <p class="welcome-subtitle">وجهتك الأولى للعناية بالرجال في جدة
+حلاقة عصرية ، عناية متكاملة ومساج احترافي يضمن لك الراحة والدلال اللذي تستحقه</p>
 </div>
 
 <!-- الأزرار -->
@@ -261,6 +293,16 @@ body::after {
         </svg>
         <span>موقع المحل</span>
       </a>
+
+      <!-- صورة المكان -->
+<div class="location-image-frame">
+  <img 
+    src="/location.webp" 
+    alt="موقع عناية يزن"
+    class="location-image"
+  />
+</div>
+
 
     </div>
 
